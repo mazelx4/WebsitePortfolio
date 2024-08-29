@@ -1,0 +1,744 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-sizing: border-box;
+    padding: 10px; /* Optional: Adds space inside the container */
+    border-radius: 10px; /* Optional: Adds rounded corners to the container */
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #f5ba13;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #f5ba13;
+    text-decoration: none;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: #f5ba13;
+    border-bottom: 2px solid #f5ba13;
+}
+
+#portfolio {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background-color: #f5ba13;
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tab-link:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.tab-link.active {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.portfolio-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 45%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-control.left {
+    left: 10px;
+}
+
+.carousel-control.right {
+    right: 10px;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: #f5ba13;
+    color: #121212;
+}
+
+.card-back {
+    background-color: #ffffff;
+    color: #121212;
+    transform: rotateY(180deg);
+}
+
+.delete-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 76, 76, 0.4);
+}
+
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 20%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 1.8em;
+    color: #f5ba13;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #f5ba13;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+.main-content {
+    width: 80%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Updated Navigation Styling */
+.navbar {
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f5ba13;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #f5ba13;
+    transition: width .3s;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar ul li a.active {
+    color: #f5ba13;
+    border-bottom: 2px solid #f5ba13;
+}
+
+/* Animation for active state */
+.navbar ul li a.active::after {
+    width: 100%;
+}
+
+/* Contact Section */
+#contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.form-group input {
+    height: 40px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-button {
+    background-color: #f5ba13;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #e09e00;
+}
+
+
+/* Basic Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #f5ba13;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #f5ba13;
+    text-decoration: none;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Enhanced Navigation Bar */
+.animated-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.animated-nav ul:hover {
+    background-color: #282828;
+}
+
+.animated-nav ul li {
+    display: inline;
+}
+
+.animated-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.animated-nav ul li a:hover {
+    color: #f5ba13;
+}
+
+.animated-nav ul li a.active {
+    color: #f5ba13;
+    border-bottom: 2px solid #f5ba13;
+}
+
+/* Tabs and Portfolio Content */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background-color: #f5ba13;
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-link:hover {
+    background-color: #ffffff;
+    color: #f5ba13;
+}
+
+.tab-link.active {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.portfolio-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-images img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.carousel-control.left {
+    left: 0;
+}
+
+.carousel-control.right {
+    right: 0;
+}
+
+/* Card Flip Animation */
+.card-wrapper {
+    perspective: 1000px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+.card {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.card-front, .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #121212;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card-back {
+    background-color: #f5ba13;
+    color: #f5ba13;
+    transform: rotateY(180deg);
+}
+
+/* Delete Button Animation */
+.delete-button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* Styling for the GIF container */
+.gif-container {
+    margin-top: 20px; /* Space above the GIF container */
+    text-align: center; /* Center-align the GIF within the container */
+    background-color: #333; /* Dark grey background color */
+    padding: 10px; /* Optional: Adds space inside the container */
+    border-radius: 10px; /* Optional: Adds rounded corners to the container */
+}
+
+/* Styling for the theme GIF */
+.theme-gif {
+    width: 100%; /* Makes the GIF adaptive to the container width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Slightly rounded corners for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect for depth */
+}
+
+/* Position the floating theme switcher in the bottom-left corner */
+.theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#theme-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    border-radius: 50%;        /* Circular button */
+    padding: 10px 15px;        /* Spacing inside the button */
+    font-size: 20px;           /* Size of the icon */
+    cursor: pointer;           /* Pointer cursor on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+#theme-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+}
+
+#theme-options button {
+    margin-bottom: 5px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#theme-options button:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+

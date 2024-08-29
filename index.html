@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jayson Manio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="images/profile.jpg" alt="Profile Picture">
+                <h2>Jayson Manio</h2>
+                <p>IT Specialist | Computer Technician | Data Analyst</p>
+            </div>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:samairhii@gmail.com">samairhii@gmail.com</a></p>
+                <p>Phone: <a href="tel:+639606965381">+63 960 696 5381</a></p>
+                <p>Address: #063 Dafodills St. Mabuco, Hermosa, Bataan</p>
+                <p>Birthday: January 2009</p>
+            </div>
+            <!-- New container for the animated GIF -->
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/theme.gif" alt="Theme Animation" class="theme-gif">
+                        </div>
+                        <div class="card-back">
+                            <!-- Optional: Add content for the back of the card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Updated Navigation -->
+            <nav class="animated-nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section id="portfolio">
+                <h1>Portfolio</h1>
+                <div class="tabs">
+                    <button class="tab-link active" onclick="openTab(event, 'all')">All</button>
+                    <button class="tab-link" onclick="openTab(event, 'applications')">Applications</button>
+                    <button class="tab-link" onclick="openTab(event, 'web-development')">Web Development</button>
+                </div>
+                <div class="portfolio-content">
+                    <div id="all" class="tab-content active">
+                        <div class="project">
+                            <img src="images/project1.jpg" alt="Project 1">
+                            <h3>Project 1</h3>
+                            <p>Applications</p>
+                        </div>
+                        <div class="project">
+                            <img src="images/project2.jpg" alt="Project 2">
+                            <h3>Project 2</h3>
+                            <p>Web Development</p>
+                        </div>
+                    </div>
+                    <div id="applications" class="tab-content">
+                        <div class="project">
+                            <img src="images/project1.jpg" alt="Project 1">
+                            <h3>Project 1</h3>
+                            <p>Applications</p>
+                        </div>
+                    </div>
+                    <div id="web-development" class="tab-content">
+                        <div class="project">
+                            <img src="images/project2.jpg" alt="Project 2">
+                            <h3>Project 2</h3>
+                            <p>Web Development</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+  		  <!-- Floating Theme Switcher -->
+	       <div class="theme-switcher">
+    		 <button id="theme-button">⚙️</button>
+    		 <div id="theme-options" class="hidden">
+      		 <button id="dark-theme">Dark Theme</button>
+        	 <button id="light-theme">Light Theme</button>
+       		 <button id="system-theme">System Theme</button>
+   		 </div>
+	       </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jayson Manio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+    <div class="profile">
+        <img src="images/profile.jpg" alt="Profile Picture">
+        <h2>Jayson Manio</h2>
+        <p>IT Specialist | Computer Technician | Data Analyst</p>
+    </div>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:samairhii@gmail.com">samairhii@gmail.com</a></p>
+        <p>Phone: <a href="tel:+639606965381">+63 960 696 5381</a></p>
+        <p>Address: #063 Dafodills St. Mabuco, Hermosa, Bataan</p>
+        <p>Birthday: January 2009</p>
+    </div>
+    <!-- New container for the animated GIF -->
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="images/theme.gif" alt="Theme Animation" class="theme-gif">
+                </div>
+                <div class="card-back">
+                    <!-- Optional: Add content for the back of the card -->
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Updated Navigation -->
+            <nav class="animated-nav">
+                <ul>
+		    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section id="contact">
+                <h1>Contact Me</h1>
+                <p>If you have any questions, feel free to send me a message using the form below. I'll get back to you as soon as possible.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

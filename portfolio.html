@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jayson Manio</title>
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+    <div class="profile">
+        <img src="images/profile.jpg" alt="Profile Picture">
+        <h2>Jayson Manio</h2>
+        <p>IT Specialist | Computer Technician | Data Analyst</p>
+    </div>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:samairhii@gmail.com">samairhii@gmail.com</a></p>
+        <p>Phone: <a href="tel:+639606965381">+63 960 696 5381</a></p>
+        <p>Address: #063 Dafodills St. Mabuco, Hermosa, Bataan</p>
+        <p>Birthday: January 2009</p>
+    </div>
+    <!-- New container for the animated GIF -->
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="images/theme.gif" alt="Theme Animation" class="theme-gif">
+                </div>
+                <div class="card-back">
+                    <!-- Optional: Add content for the back of the card -->
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <nav class="animated-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section id="portfolio">
+                <h1>Portfolio</h1>
+                <div class="tabs">
+                    <button class="tab-link active" onclick="openTab(event, 'all')">All</button>
+                    <button class="tab-link" onclick="openTab(event, 'applications')">Applications</button>
+                    <button class="tab-link" onclick="openTab(event, 'web-development')">Web Development</button>
+                </div>
+                <div class="portfolio-content">
+                    <div id="all" class="tab-content active">
+                        <div class="project element">
+                            <img src="images/project1.jpg" alt="Project 1">
+                            <h3>Project 1</h3>
+                            <p>Applications</p>
+                        </div>
+                        <div class="project element">
+                            <img src="images/project2.jpg" alt="Project 2">
+                            <h3>Project 2</h3>
+                            <p>Web Development</p>
+                        </div>
+                        <!-- Add more projects as needed -->
+                    </div>
+                    <div id="applications" class="tab-content">
+                        <div class="project element">
+                            <img src="images/project1.jpg" alt="Project 1">
+                            <h3>Project 1</h3>
+                            <p>Applications</p>
+                        </div>
+                        <!-- Add more application projects as needed -->
+                    </div>
+                    <div id="web-development" class="tab-content">
+                        <div class="project element">
+                            <img src="images/project2.jpg" alt="Project 2">
+                            <h3>Project 2</h3>
+                            <p>Web Development</p>
+                        </div>
+                        <!-- Add more web development projects as needed -->
+                    </div>
+                </div>
+
+                <!-- Responsive Image Carousel -->
+                <div class="carousel">
+                    <button class="carousel-control left" onclick="moveCarousel(-1)">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="images/project1.jpg" alt="Project 1">
+                        <img src="images/project2.jpg" alt="Project 2">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <button class="carousel-control right" onclick="moveCarousel(1)">&#10095;</button>
+                </div>
+
+                <!-- Hover Card Flip Animation -->
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Front Side</h3>
+                                <p>Hover over me!</p>
+                            </div>
+                            <div class="card-back">
+                                <h3>Back Side</h3>
+                                <p>More information here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		
+		<div class="card-wrapper">
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="theme.gif" alt="GIF" class="theme-gif">
+            </div>
+            <div class="card-back">
+                <!-- Content for the back of the card -->
+                <p>Additional Information or Decoration</p>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- Delete Button Animation -->
+                <button class="delete-button">Delete</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
